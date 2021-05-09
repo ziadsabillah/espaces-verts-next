@@ -1,6 +1,5 @@
 
-import Slider from 'react-animated-slider';
-import HeroBanner from './HeroBanner';
+import { Fade } from 'react-slideshow-image'
 import styled from 'styled-components'
 
 
@@ -39,6 +38,12 @@ export default function Hero() {
             button: "Besoin de Services d'Urgence?",
             href: '/',
             imgPath: '/slider/slider-1.jpg',
+        }, {
+            title: 'Hello there',
+            titleColor: "#FFF",
+            button: 'Hell',
+            href: '/',
+            imgPath: '/slider/slider-1.jpg'
         }
     ]
 
@@ -46,14 +51,14 @@ export default function Hero() {
 
     return (
         <>
-            <Slider touchDisabled={true} autoplay={2000} className="slider-wrapper">
+            <Fade className="slider-wrapper">
                 {
                     slides.map((slide, index) =>
                         <div key={index}
                             className="slider-content"
                             style={{
                                 background: `url('${slide.imgPath}') black`,
-                                minHeight: '100%',
+                                height: '70vh',
                                 backgroundPosition: 'center',
                                 backgroundRepeat: 'no-repeat',
                                 backgroundSize: "cover",
@@ -78,8 +83,8 @@ export default function Hero() {
                         </div>
                     )
                 }
-            </Slider>
-            <HeroBanner />
+            </Fade>
+            
         </>
     )
 }
