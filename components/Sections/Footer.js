@@ -16,64 +16,10 @@ const MainFooter = styled.footer`
         width: 100%;
         height: 100%;
         display: block;
-        background-color: rgba(25, 25, 25, 0.9);
+        background-color: #1E1D24;
     }
 `;
 
-const UpperBox = styled.div`
-    position: relative;
-    padding: 22px 25px 18px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background-color: rgba(0, 0, 0, 0.3);
-    height: 100px;
-
-    @media only screen and (max-width: 767px) {
-        height: 230px;
-    }
-`;
-
-const ListItem = styled.li`
-    position: relative;
-    width: 33%;
-    float: left;
-    color: #cccccc;
-    font-size: 16px;
-    padding-left: 60px;
-    font-weight: 400;
-    padding-right: 20px;
-
-    @media only screen and (max-width: 767px) {
-        text-align: center;
-        width: 100%;
-        padding-left: 0;
-        padding-right: 0;
-        margin-bottom: 30px;
-    }
-    
-
-    &::after {
-        position: absolute;
-        content: '';
-        right: 40px;
-        top: 0px;
-        width: 1px;
-        height: 100%;
-        background-color: rgba(255, 255, 255, 0.1);
-        @media only screen and (max-width: 767px) {
-            display: none;
-            content: none;
-        }
-    }
-
-    // If its the last child remove the after element
-
-    &:last-child {
-        &::after {
-            display: none;
-            content: none;
-        }
-    }
-`;
 
 const MiddleSection = styled.div`
     position: relative;
@@ -120,7 +66,7 @@ const LinksHeader = styled.h2`
         bottom: 0px;
         width: 100%;
         height: 1px;
-        background-color: #efb200;
+        background-color: #62BE1E;
 
         @media (max-width: 400px) {
             display: none;
@@ -133,26 +79,29 @@ const LinksHeader = styled.h2`
 const List = styled.ul`
     position: relative;
 
-    li {
+    li, a {
         position: relative;
         margin-bottom: 8px;
+        color: #cccc;
+        font-size: 15px;
+        transition: all 0.3s ease;
+     
+        
+        &:hover {
+            color: #fff;
+        }
+        
+    }
 
-        a {
-            position: relative;
-            color: #cccc;
-            font-size: 15px;
-            padding-left: 15px;
-            transition: all 0.3s ease;
-            &::before {
-                position: absolute;
-                left: 0px;
-                top: 0px;
-                content: '-';
-                line-height: 1.2em;
-            }
-            &:hover {
-                color: #fff;
-            }
+    li {
+        padding-left: 10px;
+
+        &::before {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            content: '-';
+            line-height: 1.2em;
         }
     }
 `;
@@ -164,31 +113,12 @@ const Footer = () => {
         <>
             <MainFooter>
                 <AutoContainer>
-                    <UpperBox>
-                        <ListStyleOne className="clearfix">
-                            <ListItem>
-                                Avenue Mohamed V
-                                <br />
-                                Rabat, Maroc. 11000
-                            </ListItem>
-                            <ListItem>
-                                Envoyer-nous un email:
-                                <br />
-                                exemple@exemple.com
-                            </ListItem>
-                            <ListItem>
-                                Appelez-nous
-                                <br />
-                                +212 6 13049390
-                            </ListItem>
-                        </ListStyleOne>
-                    </UpperBox>
                     <MiddleSection>
                         <Row className="clearfix">
                             <Column3>
                                 <LogoWidget>
                                     <Logo>
-                                        <img src="/img/logofooter.png" alt="logo" />
+                                        <img src="/img/logo.png" alt="logo" />
                                     </Logo>
                                     <Text>
                                         Lorem ipsum dolor sit amet, consectet ur adipiscing elit, sed do iusmod tempor incididunt ut labore et.
@@ -198,27 +128,33 @@ const Footer = () => {
                             <Column3>
                                 <LinksWidget>
                                     <LinksHeader>
-                                        Liens Utiles
+                                        Services
                                     </LinksHeader>
                                     <List>
                                         <li>
                                             <a href="/">
-                                                Accueil 
+                                            Taille des Arbres et Arbustes 
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                A propos
+                                            Entretien des jardins
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                Clients
+                                                Irrigation Et Drainage
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                Réalisations
+                                                
+                                                Entretien de la pelouse et du jardin
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                            Plantation et enlèvement
                                             </a>
                                         </li>
                                     </List>
@@ -227,20 +163,20 @@ const Footer = () => {
                             <Column3>
                                 <LinksWidget>
                                     <LinksHeader>
-                                        Nos Services
+                                        Contact
                                     </LinksHeader>
                                     <List>
                                         <li>
-                                            <a href="#">TRAVAUX D’AMÉNAGEMENT</a>
+                                            TRAVAUX D’AMÉNAGEMENT
                                         </li>
                                         <li>
-                                            <a href="#">MAÎTRISE D'OUVRAGE DÉLÉGUÉE (MOD)</a>
+                                            MAÎTRISE D'OUVRAGE DÉLÉGUÉE (MOD)
                                         </li>
                                         <li>
-                                            <a href="#">CONSTRUCTION CLÉ EN MAIN</a>
+                                            CONSTRUCTION CLÉ EN MAIN
                                         </li>
                                         <li>
-                                            <a href="#">ASSISTANCE AU MAÎTRE D'OUVRAGE (AMO)</a>
+                                            ASSISTANCE AU MAÎTRE D'OUVRAGE (AMO)
                                         </li>
                                     </List>
                                 </LinksWidget>
