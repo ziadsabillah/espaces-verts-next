@@ -167,16 +167,16 @@ const Footer = () => {
                                     </LinksHeader>
                                     <List>
                                         <li>
-                                            TRAVAUX D’AMÉNAGEMENT
+                                            Avenue Mohamed V
                                         </li>
                                         <li>
-                                            MAÎTRISE D'OUVRAGE DÉLÉGUÉE (MOD)
+                                            +212 XXXXXXXX
                                         </li>
                                         <li>
-                                            CONSTRUCTION CLÉ EN MAIN
+                                            +212 5XXXXXXX
                                         </li>
                                         <li>
-                                            ASSISTANCE AU MAÎTRE D'OUVRAGE (AMO)
+                                            exemple@matechso.com
                                         </li>
                                     </List>
                                 </LinksWidget>
