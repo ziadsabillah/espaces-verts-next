@@ -6,7 +6,7 @@ import { Column3, Row } from '../../General';
 
 
 const Section = styled.section`
-    margin: 4em 0;
+    margin: 4em 0 0 0;
     background-color: #f6f6f6;
 
 `;
@@ -124,7 +124,7 @@ const WhatWeDo = () => {
                     </SectionHeader>
                     <Row>
                         {services.map((service, index) => (
-                            <Column3>
+                            <Column3 key={index}>
                                 <CardContainer>
                                     <IconBoxWrapper>
                                         <CardIcon>
