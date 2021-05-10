@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import AutoContainer from '../AutoContainer';
+import AutoContainer from '../../AutoContainer';
 
 
 const ServiceSection = styled.section`
