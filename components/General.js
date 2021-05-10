@@ -98,10 +98,10 @@ export const Row = styled.div`
 
 
 export const Column3 = styled.div`
-
-    @media (min-width: 992px) {
+    @media (min-width: 992px)
+    {
             flex: 33.333337%;
-        }
+    }
 
     flex: 100%;
     padding-right: 15px;
