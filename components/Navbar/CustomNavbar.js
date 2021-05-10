@@ -5,6 +5,7 @@ import { DeviceSize } from './responsive'
 import MobileNavLinks from './MobileNavLinks'
 
 import { useMediaQuery } from 'react-responsive'
+import TopHeader from '../TopHeader';
 
 const NavbarContainer = styled.div`
     width: 100%;
@@ -37,6 +38,8 @@ const CustomNavbar = () => {
 
     return (
         <>
+
+            {!isMobile && <TopHeader />}
             <NavbarContainer>
                 {/* <LeftSection>
                     <Logo></Logo>

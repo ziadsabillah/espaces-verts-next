@@ -42,6 +42,10 @@ const Link = styled.a`
     text-decoration: none;
     color: inherit;
     font-size: inherit;
+
+    &:hover {
+        color: #000;
+    }
 `;
 
 const DetectActive = ({href, pageName}) => {
