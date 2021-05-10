@@ -38,12 +38,12 @@ const CustomNavbar = () => {
     return (
         <>
             <NavbarContainer>
-                <LeftSection>
+                {/* <LeftSection>
                     <Logo></Logo>
-                </LeftSection>
-                <MiddleSection>
+                </LeftSection> */}
+                <LeftSection>
                     {!isMobile && <NavLinks />}
-                </MiddleSection>
+                </LeftSection>
                 <RightSection>
                     {isMobile && <MobileNavLinks />}
                 </RightSection>

@@ -4,7 +4,6 @@ import React from "react";
 
 
 const NavLinkContainer = styled.div`
-    height: 70%;
     display: flex; 
     align-items: center;
     align-self: center;
@@ -13,15 +12,13 @@ const NavLinkContainer = styled.div`
 const LinksWrapper = styled.ul`
     margin: 0;
     padding: 0;
-    display: flex;
-    height: 85%;
-    
+    display: flex;    
     list-style: none;
 `;
 
 const LinkItem = styled.li`
-    height: 100%;
-    padding: 0 1.1em;
+    padding: .5em 1.1em;
+    border-radius: 2px 2px 2px 2px;
     color: #FFFFFF;
     margin: 0 .2em;
     font-weight: 500;
@@ -29,7 +26,6 @@ const LinkItem = styled.li`
     align-items: center;
     justify-content: center;
     display: flex;
-    border-top: 2px solid transparent;
     transition: all 220ms ease-in-out; 
 
     &:hover {
