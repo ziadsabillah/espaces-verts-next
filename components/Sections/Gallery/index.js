@@ -76,7 +76,8 @@ const Effect = styled.figure`
         }
     p.description {
         position: absolute;
-        bottom: 8em;
+        bottom: 0;
+        left: -1em;
         padding: 2em;
         color: #fff;
         text-transform: none;
