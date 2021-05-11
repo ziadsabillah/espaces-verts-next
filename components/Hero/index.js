@@ -39,9 +39,9 @@ export default function Hero() {
             href: '/',
             imgPath: '/slider/slider-1.jpg',
         }, {
-            title: 'Hello there',
+            title: '[CONTENU]',
             titleColor: "#FFF",
-            button: 'Hell',
+            button: '[BUTTON]',
             href: '/',
             imgPath: '/slider/slider-1.jpg'
         }
