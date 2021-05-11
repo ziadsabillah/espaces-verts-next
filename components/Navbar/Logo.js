@@ -9,8 +9,7 @@ const LogoWrapper = styled.div`
 `;
 
 const LogoImg = styled.div`
-    width: 150px; 
-    height: 50px;
+    
 
     img {
         width: 100%;
@@ -24,7 +23,7 @@ const LogoImg = styled.div`
 const Logo = () => (
     <>
         <LogoWrapper>
-            <LogoImg><Link href="/"><Image src='/img/logofooter.png' alt="MaTechSo Template Logo" width={150} height={50}/></Link></LogoImg>
+            <LogoImg><Link href="/"><Image src='/img/logo.png' alt="MaTechSo Template Logo" width={100} height={25}/></Link></LogoImg>
         </LogoWrapper>
     </>
 )

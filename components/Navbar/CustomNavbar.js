@@ -15,6 +15,7 @@ const NavbarContainer = styled.div`
     align-items: center;
     padding: 0 1.5em;
     background: #62BE1E;
+    ${props => props.isMobile ? 'justify-content: space-between': '' }
 `;
 
 const LeftSection = styled.div`
@@ -25,12 +26,6 @@ const RightSection = styled.div`
     display: flex;
 `;
 
-const MiddleSection = styled.div`
-    display: flex;
-    height: 100%;
-    flex: 2;
-    justify-content: center;
-`;
 
 const CustomNavbar = () => {
 
@@ -40,10 +35,15 @@ const CustomNavbar = () => {
         <>
 
             {!isMobile && <TopHeader />}
-            <NavbarContainer>
-                {/* <LeftSection>
-                    <Logo></Logo>
-                </LeftSection> */}
+            {/* Passing the isMobile to set the content to the right side if we're on mobile 
+                TODO: Do smth about the LOGO on mobile ? Need white version 
+            */}
+            <NavbarContainer isMobile={isMobile}>
+                    {isMobile && (
+                        <LeftSection>
+                            <Logo></Logo>
+                        </LeftSection>
+                    )}
                 <LeftSection>
                     {!isMobile && <NavLinks />}
                 </LeftSection>
