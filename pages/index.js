@@ -7,7 +7,7 @@ import Gallery from '../components/Sections/Gallery'
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout title="Jardinier">
       <Hero />
       <Services />
       <Guarantee />
