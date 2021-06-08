@@ -37,6 +37,11 @@ const ServiceBannerBG = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
 
+    @media only screen and (max-width: 767px) {
+        padding: 1em;
+        margin: 1em;
+    }
+
     border-radius: 2px 2px 2px 2px;
     width: 100%;
 
