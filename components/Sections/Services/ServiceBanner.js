@@ -258,7 +258,7 @@ const Services = ({ services }) => {
                         <Col50>
                             <CustomRow>
                                 {services?.slice(0, 4).map(service => (
-                                    <Col sm={12} md={6}>
+                                    <Col key={service._id} sm={12} md={6}>
                                         <ColumnWrap>
                                             <ColumnContent>
                                                 <ImageFigure>
@@ -280,7 +280,7 @@ const Services = ({ services }) => {
                     </Row>
                     <CustomRow>
                         {services?.slice(4, services.length).map(service => (
-                            <Col sm={12} md={4}>
+                            <Col key={service._id} sm={12} md={4}>
                             <ColumnWrap>
                                 <ColumnContent>
                                     <ImageFigure>
