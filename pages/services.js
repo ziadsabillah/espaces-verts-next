@@ -6,7 +6,7 @@ export default function ServicesPage() {
     return (
         <>
         <Layout title="Services">
-            <Services services={services} />
+            <Services services={services} onHome={false} />
         </Layout>
         </>
     )
