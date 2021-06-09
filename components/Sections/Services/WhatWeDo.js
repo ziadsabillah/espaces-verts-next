@@ -4,6 +4,8 @@ import AutoContainer from '../../AutoContainer'
 import styled from 'styled-components'
 import { Column3, Row } from '../../General';
 
+import { FaTree } from 'react-icons/fa'
+
 
 const Section = styled.section`
     margin: 4em 0 0 0;
@@ -52,7 +54,7 @@ const CardIcon = styled.div`
 
     a {
         background-color: #62be1e;
-        font-size: 39px;
+        font-size: 20px;
         border-radius: 50%;
         padding: .5em;
         color: #fff;
@@ -63,14 +65,6 @@ const CardIcon = styled.div`
         line-height: 1;
         transition: all .3s;
         text-align: center;
-
-        i {
-            transform: rotate(0deg);
-            width: 1em;
-            height: 1em;
-            position: relative;
-            display: block;
-        }
     }
 
 `;
@@ -98,17 +92,17 @@ const WhatWeDo = () => {
 
     const services = [
         {
-            icon: 'fab fa-envira',
+            icon: <FaTree color="white" size="24px" />,
             title: 'TAILLE DES ARBRES ET ARBUSTES',
             href: '/',
             description: "Nous fournissons à nos clients toute la gamme de services. Nous réparerons tout dysfonctionnement en des termes record pour que vous n'ayez aucun souci!"
         }, {
-            icon: 'fab fa-envira',
+            icon: <FaTree color="white" size="24px" />,
             title: "ENTRETIEN DU LIT DE JARDIN",
             href: '/',
             description: "Nous fournissons à nos clients toute la gamme de services. Nous réparerons tout dysfonctionnement en des termes record pour que vous n'ayez aucun souci!"
         }, {
-            icon: 'fab fa-envira',
+            icon: <FaTree color="white" size="24px" />,
             title: "IRRIGATION ET DRAINAGE",
             href: '/',
             description: "Nous fournissons à nos clients toute la gamme de services. Nous réparerons tout dysfonctionnement en des termes record pour que vous n'ayez aucun souci!"
@@ -129,7 +123,7 @@ const WhatWeDo = () => {
                                     <IconBoxWrapper>
                                         <CardIcon>
                                             <a href='/'>
-                                                <i className="fab fa-envira"></i>
+                                                    {service.icon}
                                             </a>
                                         </CardIcon>
                                         <CardContent>
