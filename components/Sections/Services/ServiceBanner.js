@@ -40,7 +40,8 @@ const ServiceBannerBG = styled.div`
 
     @media only screen and (max-width: 767px) {
         padding: 1em;
-        margin: 1em;
+        margin: 0 auto 4em auto;
+        background-position: left;
     }
 
     border-radius: 2px 2px 2px 2px;
@@ -107,6 +108,10 @@ const Button = styled.div`
     border-radius: 2px 2px 2px 2px;
     padding: 13px 30px;
     width: 60%;
+    @media (max-width: 767px) {
+        width: 80%;
+        text-align: center;
+    }
 
     &:hover {
         cursor: pointer;
@@ -230,7 +235,7 @@ const Services = ({ services }) => {
         <>
             <ServiceSection>
                 <AutoContainer>
-                    <Row>
+                    <CustomRow>
                         <Col50>
                             <ServiceBannerBG>
                                 <ServiceBannerTextFirst className="clearfix">
@@ -277,7 +282,7 @@ const Services = ({ services }) => {
                                 ))}
                             </CustomRow>
                         </Col50>
-                    </Row>
+                    </CustomRow>
                         <CustomRow>
                             {services?.slice(4, services.length).map(service => (
                                 <Col key={service._id} sm={12} md={4}>
