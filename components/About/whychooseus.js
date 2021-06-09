@@ -1,6 +1,5 @@
 import { Row, Col } from 'react-bootstrap';
 import styled from 'styled-components'
-import { FcOvertime } from 'react-icons/fc'
 import { IoIosCash, IoMdMedal, IoMdTime, } from 'react-icons/io'
 import {AiOutlineStar} from 'react-icons/ai';
 import { SectionHeader } from '../SectionHeader';

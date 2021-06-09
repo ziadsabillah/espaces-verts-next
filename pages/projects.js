@@ -14,7 +14,6 @@ const Projects = () => {
                     <h2>Réalisations</h2>
                     <p>
                     Nous sommes fiers de vous montrer nos projets réalisés avec toutes nos compétences et notre professionnalisme.
-
                     </p>
                 </SectionHeader>
                 <ProjectGallery />
