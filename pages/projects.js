@@ -11,6 +11,7 @@ const Projects = () => {
             <Container>
                 <SectionHeader>
                     <h2>Réalisations</h2>
+                    <p>lorem ipsum</p>
                 </SectionHeader>
             </Container>
         </Layout>
