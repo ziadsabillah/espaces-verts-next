@@ -5,11 +5,13 @@ import Guarantee from '../components/Sections/Guarantee'
 import WhatWeDo from '../components/Sections/Services/WhatWeDo'
 import Gallery from '../components/Sections/Gallery'
 
+import services from '../data/services'
+
 export default function Home() {
   return (
     <Layout title="Jardinier">
       <Hero />
-      <Services />
+      <Services services={services.slice(0, 3)} />
       <Guarantee />
       <WhatWeDo />
       <Gallery />

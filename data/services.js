@@ -29,7 +29,20 @@ const services = [
         title: 'ORDONNANCEMENT, PILOTAGE ET COORDINATION (OPC)',
         description: 'Lexcept to obtain some advantage from it? But who has any right to find fault with a man chooses to enjoy.',
         iconPath: 'icons/icon-4.svg'
-    }
+    },
+    {
+        _id: 'f',
+        title: 'ORDONNANCEMENT, PILOTAGE ET COORDINATION (OPC)',
+        description: 'Lexcept to obtain some advantage from it? But who has any right to find fault with a man chooses to enjoy.',
+        iconPath: 'icons/icon-4.svg'
+    },
+    {
+        _id: 'g',
+        title: 'ORDONNANCEMENT, PILOTAGE ET COORDINATION (OPC)',
+        description: 'Lexcept to obtain some advantage from it? But who has any right to find fault with a man chooses to enjoy.',
+        iconPath: 'icons/icon-4.svg'
+    },
+    
 ];
 
 export default services;
