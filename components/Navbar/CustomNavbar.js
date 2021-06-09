@@ -14,7 +14,7 @@ const NavbarContainer = styled.div`
     display: flex;
     align-items: center;
     padding: 0 1.5em;
-    background: #62BE1E;
+    background: #4e9918;
     justify-content: space-between;
     ${props => props.isMobile || props.isTablet ? 'justify-content: space-between': '' }
 `;

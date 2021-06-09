@@ -174,9 +174,9 @@ const Guarantee = () => {
                                 <HeaderColumn>
                                     <h3>100%<span> Garantie</span></h3>
                                     <p>Si vous n'êtes pas satisfait, nous vous rembourserons votre argent à 100%. Aucune question posée!</p>
-                                    <ButtonWrapper>
+                                    {/* <ButtonWrapper>
                                         <a href="/">LIRE PLUS</a>
-                                    </ButtonWrapper>
+                                    </ButtonWrapper> */}
                                 </HeaderColumn>
                             </ContentSection>
                         </ContentWrap>

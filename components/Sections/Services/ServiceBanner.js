@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import AutoContainer from '../../AutoContainer';
 
+import services from '../../../data/services'
+
 
 const ServiceSection = styled.section`
     padding: 81px 0px;
@@ -100,8 +102,8 @@ const Button = styled.div`
     text-transform: uppercase;
     line-height: 2em;
     letter-spacing: .48px;
-    fill: #62be1e;
-    color: #62be1e;
+    fill: #4e9918;
+    color: #4e9918;
     background-color: #ffffff;
     border-radius: 2px 2px 2px 2px;
     padding: 13px 30px;
@@ -127,6 +129,15 @@ const ButtonText = styled.span`
     flex-grow: 1;
     order: 10;
     display: inline-block;
+     
+    a {
+        text-decoration: none;
+        color: #4e9918;
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
 `;
 
 const ColumnGap = styled.div`
@@ -238,7 +249,7 @@ const Services = () => {
                                 <Button>
                                     <ButtonContentWrapper>
                                         <ButtonText>
-                                            nos réalisations
+                                           <a href="/projects"> nos réalisations</a>
                                         </ButtonText>
                                     </ButtonContentWrapper>
                                 </Button>
@@ -247,7 +258,8 @@ const Services = () => {
                     </Col50>
                     <Col50>
                         <Row>
-                            <Col50>
+                            {services?.slice(0, 2).map(service => (
+                                <Col50>
                                 <ColumnGap>
                                     <ColumnWrap>
                                         <ColumnContent>
@@ -255,25 +267,19 @@ const Services = () => {
                                                 <img src='/img/service-1.jpeg' alt="Plant Removal" />
                                             </ImageFigure>
                                             <TextContent>
-                                                <h3>Service 1</h3>
+                                                <h3>{service.title}</h3>
                                                 <p>
-                                                Si vous souhaitez que votre jardin soit bien entretenu et que vous ayez besoin d'arbres et de plantes à enlever, tailler ou fertiliser, 
-                                                notre équipe de professionnels fera tout pour vous, vous n'aurez donc aucun souci.
+                                                {service.description}
                                                 </p>
                                             </TextContent>
                                         </ColumnContent>
-                                        <ServiceDetailBtnWrapper>
-                                            <BtnContainer>
-                                                <Btn>
-                                                    Voir details
-                                                </Btn>
-                                            </BtnContainer>
-                                        </ServiceDetailBtnWrapper>
                                     </ColumnWrap>
 
                                 </ColumnGap>
                             </Col50>
-                            <Col50>
+                            ))}
+                            
+                            {/* <Col50>
                             <ColumnGap>
                                     <ColumnWrap>
                                         <ColumnContent>
@@ -298,7 +304,7 @@ const Services = () => {
                                     </ColumnWrap>
 
                                 </ColumnGap>
-                            </Col50>
+                            </Col50> */}
                         </Row>
                     </Col50>
                 </Row>
