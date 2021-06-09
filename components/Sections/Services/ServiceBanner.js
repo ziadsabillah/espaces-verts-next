@@ -27,7 +27,7 @@ const Col50 = styled.div`
 `;
 
 const ServiceBannerBG = styled.div`
-    max-height: 700px;
+    max-height: 490px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -273,32 +273,32 @@ const Services = ({ services }) => {
                                             </ColumnContent>
                                         </ColumnWrap>
                                     </Col>
-        
+
                                 ))}
                             </CustomRow>
                         </Col50>
                     </Row>
-                    <CustomRow>
-                        {services?.slice(4, services.length).map(service => (
-                            <Col key={service._id} sm={12} md={4}>
-                            <ColumnWrap>
-                                <ColumnContent>
-                                    <ImageFigure>
-                                        <img src='/img/service-1.jpeg' alt="Plant Removal" />
-                                    </ImageFigure>
-                                    <TextContent>
-                                        <h3>{service.title}</h3>
-                                        <p>
-                                            {service.description}
-                                        </p>
-                                    </TextContent>
-                                </ColumnContent>
-                            </ColumnWrap>
-                        </Col>
-                        ))}
-                    </CustomRow>
+                        <CustomRow>
+                            {services?.slice(4, services.length).map(service => (
+                                <Col key={service._id} sm={12} md={4}>
+                                    <ColumnWrap>
+                                        <ColumnContent>
+                                            <ImageFigure>
+                                                <img src='/img/service-1.jpeg' alt="Plant Removal" />
+                                            </ImageFigure>
+                                            <TextContent>
+                                                <h3>{service.title}</h3>
+                                                <p>
+                                                    {service.description}
+                                                </p>
+                                            </TextContent>
+                                        </ColumnContent>
+                                    </ColumnWrap>
+                                </Col>
+                            ))}
+                        </CustomRow>
                 </AutoContainer>
-        </ServiceSection>
+            </ServiceSection>
         </>
     )
 }

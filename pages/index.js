@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <Layout title="Jardinier">
       <Hero />
-      <Services services={services.slice(0, 3)} />
+      <Services services={services.slice(0, 2)} onHome />
       <Guarantee />
       <WhatWeDo />
       <Gallery />
