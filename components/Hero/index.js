@@ -10,7 +10,7 @@ const Button = styled.a`
     z-index: 11000;
     font-size: 1em;
     font-weight: 500;
-    background: #62be1e;
+    background: #4e9918;
     text-transform: uppercase;
     display: inline-block;
     padding: 12px 30px;
