@@ -327,3 +327,17 @@ header {
     content: none;
   }
 }
+
+.react-slideshow-container .default-nav:hover, .react-slideshow-container .default-nav:focus {
+  background-color: transparent !important;
+  color: transparent !important;
+}
+.react-slideshow-container .default-nav, .react-slideshow-container .default-nav {
+  background-color: transparent !important;
+  color: transparent !important;
+}
+
+.react-slideshow-container .default-nav svg path, .react-slideshow-container .default-nav svg path {
+  background-color: transparent !important;
+  fill: #fff !important;
+}
