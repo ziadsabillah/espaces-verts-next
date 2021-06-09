@@ -37,7 +37,7 @@ const Icon = styled.div`
     align-items: center;
     svg {
         width: 2em !important;
-        color: #62BE1E;
+        color: #4e9918;
 
         &:hover {
             color: #FE8A53;
@@ -90,7 +90,7 @@ const ButtonWrap = styled.div`
         padding: 13px 21px 13px 21px;
         transition: background 0.35s ease-in;
         &:hover {
-            background: #62BE1E;
+            background: #4e9918;
         }
     }
 `;
