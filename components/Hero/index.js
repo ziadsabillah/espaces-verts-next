@@ -8,6 +8,7 @@ const Button = styled.a`
     line-height: 24px;
     color: #ffffff;
     z-index: 11000;
+    text-decoration: none;
     font-size: 1em;
     font-weight: 500;
     background: #4e9918;
@@ -20,6 +21,7 @@ const Button = styled.a`
 
     &:hover {
         background: #FEAB48 !important;
+        color: #ffffff;
     }
 
     @media only screen and (max-width: 400px) {
