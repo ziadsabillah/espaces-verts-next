@@ -1,7 +1,7 @@
+import { Col, Row } from 'react-bootstrap';
 import styled from 'styled-components'
 import AutoContainer from '../../AutoContainer';
 
-import services from '../../../data/services'
 
 
 const ServiceSection = styled.section`
@@ -10,14 +10,11 @@ const ServiceSection = styled.section`
     box-sizing: border-box;
 `;
 
-const Row = styled.div`
-    display: flex;
+const CustomRow = styled(Row)`
     width: 100%;
-    @media (min-width: 768px) {
-        flex-direction: row;
-    }
-    flex-direction: column;
 `;
+
+
 
 const Col50 = styled.div`
     width: 100%;
@@ -30,6 +27,7 @@ const Col50 = styled.div`
 `;
 
 const ServiceBannerBG = styled.div`
+    max-height: 700px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -38,6 +36,7 @@ const ServiceBannerBG = styled.div`
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    justify-content: space-evenly;
 
     @media only screen and (max-width: 767px) {
         padding: 1em;
@@ -226,89 +225,79 @@ const Btn = styled.a`
 
 
 
-const Services = () => {
+const Services = ({ services }) => {
     return (
         <>
-        <ServiceSection>
-            <AutoContainer>
-                <Row>
-                    <Col50>
-                        <ServiceBannerBG>
-                            <ServiceBannerTextFirst className="clearfix">
-                                ON VOUS OFFRE
+            <ServiceSection>
+                <AutoContainer>
+                    <Row>
+                        <Col50>
+                            <ServiceBannerBG>
+                                <ServiceBannerTextFirst className="clearfix">
+                                    ON VOUS OFFRE
                             </ServiceBannerTextFirst>
-                            <ServiceBannerTextSecond className="clearfix">
-                                DES SERVICES EXPETIONNEL
+                                <ServiceBannerTextSecond className="clearfix">
+                                    DES SERVICES EXPETIONNEL
                             </ServiceBannerTextSecond>
-                            <ServiceBannerParagraph>
-                            Nous offrons une large gamme de services d'aménagement paysager pour créer une atmosphère 
-                            belle et confortable dans votre jardin.
-                            Nos experts travaillent avec les plantes avec soin et attention.
+                                <ServiceBannerParagraph>
+                                    Nous offrons une large gamme de services d'aménagement paysager pour créer une atmosphère
+                                    belle et confortable dans votre jardin.
+                                    Nos experts travaillent avec les plantes avec soin et attention.
                             </ServiceBannerParagraph>
-                            <CtaBtnContainer>
-                                <Button>
-                                    <ButtonContentWrapper>
-                                        <ButtonText>
-                                           <a href="/projects"> nos réalisations</a>
-                                        </ButtonText>
-                                    </ButtonContentWrapper>
-                                </Button>
-                            </CtaBtnContainer>
-                        </ServiceBannerBG>
-                    </Col50>
-                    <Col50>
-                        <Row>
-                            {services?.slice(0, 2).map(service => (
-                                <Col50>
-                                <ColumnGap>
-                                    <ColumnWrap>
-                                        <ColumnContent>
-                                            <ImageFigure>
-                                                <img src='/img/service-1.jpeg' alt="Plant Removal" />
-                                            </ImageFigure>
-                                            <TextContent>
-                                                <h3>{service.title}</h3>
-                                                <p>
-                                                {service.description}
-                                                </p>
-                                            </TextContent>
-                                        </ColumnContent>
-                                    </ColumnWrap>
-
-                                </ColumnGap>
-                            </Col50>
-                            ))}
-                            
-                            {/* <Col50>
-                            <ColumnGap>
-                                    <ColumnWrap>
-                                        <ColumnContent>
-                                            <ImageFigure>
-                                                <img src='/img/service-1.jpeg' alt="Plant Removal" />
-                                            </ImageFigure>
-                                            <TextContent>
-                                                <h3>Service 2</h3>
-                                                <p>
-                                                Si vous souhaitez que votre jardin soit bien entretenu et que vous ayez besoin d'arbres et de plantes à enlever, tailler ou fertiliser, 
-                                                notre équipe de professionnels fera tout pour vous, vous n'aurez donc aucun souci.
-                                                </p>
-                                            </TextContent>
-                                        </ColumnContent>
-                                        <ServiceDetailBtnWrapper>
-                                            <BtnContainer>
-                                                <Btn>
-                                                    Voir details
-                                                </Btn>
-                                            </BtnContainer>
-                                        </ServiceDetailBtnWrapper>
-                                    </ColumnWrap>
-
-                                </ColumnGap>
-                            </Col50> */}
-                        </Row>
-                    </Col50>
-                </Row>
-            </AutoContainer>
+                                <CtaBtnContainer>
+                                    <Button>
+                                        <ButtonContentWrapper>
+                                            <ButtonText>
+                                                <a href="/projects"> nos réalisations</a>
+                                            </ButtonText>
+                                        </ButtonContentWrapper>
+                                    </Button>
+                                </CtaBtnContainer>
+                            </ServiceBannerBG>
+                        </Col50>
+                        <Col50>
+                            <CustomRow>
+                                {services?.slice(0, 4).map(service => (
+                                    <Col sm={12} md={6}>
+                                        <ColumnWrap>
+                                            <ColumnContent>
+                                                <ImageFigure>
+                                                    <img src='/img/service-1.jpeg' alt="Plant Removal" />
+                                                </ImageFigure>
+                                                <TextContent>
+                                                    <h3>{service.title}</h3>
+                                                    <p>
+                                                        {service.description}
+                                                    </p>
+                                                </TextContent>
+                                            </ColumnContent>
+                                        </ColumnWrap>
+                                    </Col>
+        
+                                ))}
+                            </CustomRow>
+                        </Col50>
+                    </Row>
+                    <CustomRow>
+                        {services?.slice(4, services.length).map(service => (
+                            <Col sm={12} md={4}>
+                            <ColumnWrap>
+                                <ColumnContent>
+                                    <ImageFigure>
+                                        <img src='/img/service-1.jpeg' alt="Plant Removal" />
+                                    </ImageFigure>
+                                    <TextContent>
+                                        <h3>{service.title}</h3>
+                                        <p>
+                                            {service.description}
+                                        </p>
+                                    </TextContent>
+                                </ColumnContent>
+                            </ColumnWrap>
+                        </Col>
+                        ))}
+                    </CustomRow>
+                </AutoContainer>
         </ServiceSection>
         </>
     )
