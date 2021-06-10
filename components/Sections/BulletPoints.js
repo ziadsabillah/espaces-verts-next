@@ -71,7 +71,7 @@ const BulletPoints = ({ title, description, points, linkName, path }) => {
                             <List>
                                 <Row>
                                     {points.map(point => (
-                                        <Col sm={12} md={6}>
+                                        <Col  sm={12} md={6}>
 
                                             <li>
                                                 {point}

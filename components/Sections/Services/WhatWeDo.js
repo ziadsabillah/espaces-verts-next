@@ -4,6 +4,8 @@ import AutoContainer from '../../AutoContainer'
 import styled from 'styled-components'
 import { Column3, Row } from '../../General';
 
+import { motion } from 'framer-motion';
+import { InView } from 'react-intersection-observer';
 import { FaTree } from 'react-icons/fa'
 
 
@@ -118,20 +120,28 @@ const WhatWeDo = () => {
                     </SectionHeader>
                     <Row>
                         {services.map((service, index) => (
+
                             <Column3 key={index}>
-                                <CardContainer>
-                                    <IconBoxWrapper>
-                                        <CardIcon>
-                                            <a href='/'>
-                                                    {service.icon}
-                                            </a>
-                                        </CardIcon>
-                                        <CardContent>
-                                            <h3>{service.title}</h3>
-                                            <p>{service.description}</p>
-                                        </CardContent>
-                                    </IconBoxWrapper>
-                                </CardContainer>
+                                <InView threshold="0.1">
+                                    {({ ref, inView }) => (
+                                        <motion.div ref={ref} initial={{ scale: 0.3 }} animate={ inView ? { scale: 1 } : {scale: 0.3}} transition={{ duration: 0.8 }}>
+                                            <CardContainer>
+                                                <IconBoxWrapper>
+                                                    <CardIcon>
+                                                        <a href='/'>
+                                                            {service.icon}
+                                                        </a>
+                                                    </CardIcon>
+                                                    <CardContent>
+                                                        <h3>{service.title}</h3>
+                                                        <p>{service.description}</p>
+                                                    </CardContent>
+                                                </IconBoxWrapper>
+                                            </CardContainer>
+                                        </motion.div>
+                                    )}
+                                </InView>
+
                             </Column3>
                         ))}
                     </Row>
