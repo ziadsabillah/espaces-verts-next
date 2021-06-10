@@ -1,5 +1,7 @@
 import { Button, Col, Row, Image, Container } from 'react-bootstrap';
 import styled from 'styled-components';
+import { InView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
 
 
 const Section = styled.section`
@@ -69,16 +71,33 @@ const BulletPoints = ({ title, description, points, linkName, path }) => {
                                 {description}
                             </p>
                             <List>
+                                <InView threshold="0.3">
+                                    {({ ref, inView }) => (
+                                        <motion.div ref={ref}
+                                            initial={{ opacity: 0 }}
+                                            animate={inView ? { opacity: 1 } : { opacity: 0 }}
+                                            transition={{ duration: 0.8 }}>
+                                            <Row>
+                                                {points.map(point => (
+                                                    <Col sm={12} md={6}>
+                                                        <InView threshold="0.1">
+                                                        {({ref, inView}) => (
+                                                            <motion.div ref={ref}
+                                                                initial={{ opacity: 0, scale: 0.3 }}
+                                                                animate={inView ? {opacity: 1, scale: 1} : {opacity: 0, scale: 0.3}}
+                                                                transition={{ duration: 0.8 }}>
+                                                                    <li>{point}</li>
+                                                                </motion.div>
+                                                        )}
+                                                        </InView>
+                                                    </Col>
+                                                ))}
+
+                                            </Row>
+                                        </motion.div>
+                                    )}
+                                </InView>
                                 <Row>
-                                    {points.map(point => (
-                                        <Col  sm={12} md={6}>
-
-                                            <li>
-                                                {point}
-                                            </li>
-                                        </Col>
-
-                                    ))}
 
 
                                 </Row>
