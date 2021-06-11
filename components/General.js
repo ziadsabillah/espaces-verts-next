@@ -67,19 +67,20 @@ export const SubmitButton = styled.button`
 
     position: relative;
     line-height: 24px;
-    color: #242424;
+    color: #fff;
     font-size: 16px;
     font-weight: 500;
-    background: #f7bd00;
+    background: #4E9918;
     display: inline-block;
     border-radius: 50px;
-    border: 2px solid #f7bd00;
+    border: 2px solid #4E9918;
     font-family: 'Poppins', sans-serif;
 
     &:hover {
         background: transparent;
         border-color: 2px solid #fff;
         cursor: pointer;
+        color: #242424;
     }
 `;
 
