@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import AutoContainer from '../AutoContainer';
 import { FontAwesomeIcon  } from '@fortawesome/react-fontawesome'
-import { faClock} from '@fortawesome/free-solid-svg-icons'
+import { faAddressBook, faClock} from '@fortawesome/free-solid-svg-icons'
 
 const TopHeaderSection = styled.section`
     position: relative;
@@ -30,6 +30,12 @@ const BoxHoraires = styled.div`
     position: relative;
     align-items: center;
 
+`;
+
+const BoxAddress = styled.div`
+    display: flex;
+    position: relative;
+    align-items: center;
 `;
 
 const Icon = styled.div`
@@ -106,7 +112,7 @@ const TopHeader = () => {
                         </LogoBox>
                         <BoxHoraires>
                             <Icon>
-                                <FontAwesomeIcon icon={faClock} />
+                                <FontAwesomeIcon icon={faClock} size="2x"/>
                             </Icon>
                             <Text>
                                 <h3>LUN-VEN: 9H:00 à 16H:00</h3>
@@ -114,6 +120,15 @@ const TopHeader = () => {
                             </Text>
                            
                         </BoxHoraires>
+                        <BoxAddress>
+                            <Icon>
+                                <FontAwesomeIcon icon={faAddressBook} size="2x" />
+                            </Icon>
+                            <Text>
+                                <h3>Avenue Mohamed V</h3>
+                                <h3>Rabat 11000, Maroc</h3>
+                            </Text>
+                        </BoxAddress>
                         <Button>
                                 <ButtonWrap>
                                     <a href="/">Reserver</a>
