@@ -10,35 +10,14 @@ const ContactSection = styled.section`
     background-color: #f8f8f8;
 `;
 
-
-const LeftColumn = styled.div`
-    @media (min-width: 992px) {
-        flex: 66.666667%;
+const ColCentered = styled(Col)`
+    @media (max-width: 767px) {
+        text-align: center;
+        margin: 2em auto;
     }
-
-    @media (max-width: 500px) {
-        margin-top: 1.4em;
-    }
-    flex: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    float: left;
-
 `;
 
-const RightColumn = styled.div`
-    @media (min-width: 992px) {
-        flex: 33.33333%;
-    }
 
-    @media (max-width: 500px) {
-        margin-top: 1.4em;
-        padding: 10px;
-    }
-    flex: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-`;
 
 const InfoTitle = styled.h2`
     position: relative;
@@ -151,7 +130,7 @@ const ContactForm = () => {
                                 </SubmitButton>
                             </Form>
                         </Col>
-                        <Col sm={12} md={4}>
+                        <ColCentered sm={12} md={4}>
                             <InfoList>
                                 <li>Avenue Mohamed V</li>
                                 <li>+212 6 13 04 93 93</li>
@@ -166,7 +145,7 @@ const ContactForm = () => {
                                 Sam-Dim : 10:00 au 12:00
 
                             </Times>
-                        </Col>
+                        </ColCentered>
                     </Row>
                 </Container>
             </ContactSection>
