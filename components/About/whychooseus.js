@@ -1,8 +1,12 @@
 import { Row, Col } from 'react-bootstrap';
 import styled from 'styled-components'
 import { IoIosCash, IoMdMedal, IoMdTime, } from 'react-icons/io'
-import {AiOutlineStar} from 'react-icons/ai';
+import { AiOutlineStar } from 'react-icons/ai';
 import { SectionHeader } from '../SectionHeader';
+
+import { motion } from 'framer-motion';
+import { InView } from 'react-intersection-observer';
+
 const Section = styled.section`
 
     position: relative;
@@ -74,15 +78,23 @@ const WhyChooseUs = () => {
                 <Row>
                     {data?.map(item => (
                         <Col key={item.id} sm={12} md={3}>
-                            <CardWrapper>
-                                <Icon>
-                                    {item.icon}
-                                </Icon>
-                                <Title>{item.title}</Title>
-                                <Paragraph>
-                                    {item.description}
-                                </Paragraph>
-                            </CardWrapper>
+                            <InView threshold="0.13">
+                                {({ ref, inView }) => (
+                                    <motion.div ref={ref} initial={{ scale: 0.5 }} animate={inView ? { scale: 1 } : { scale: 0.5 }} transition={{ duration: 0.4 }}>
+                                        <CardWrapper>
+                                            <Icon>
+                                                {item.icon}
+                                            </Icon>
+                                            <Title>{item.title}</Title>
+                                            <Paragraph>
+                                                {item.description}
+                                            </Paragraph>
+                                        </CardWrapper>
+
+                                    </motion.div>
+                                )}
+                            </InView>
+
                         </Col>
                     ))}
                 </Row>
