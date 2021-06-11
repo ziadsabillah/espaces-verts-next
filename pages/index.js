@@ -7,6 +7,8 @@ import Gallery from '../components/Sections/Gallery'
 
 import services from '../data/services'
 import BulletPoints from '../components/Sections/BulletPoints'
+import WhyChooseUs from '../components/About/whychooseus'
+import { Container } from 'react-bootstrap'
 
 export default function Home() {
   const points = [
@@ -24,7 +26,11 @@ export default function Home() {
       <Guarantee />
       <WhatWeDo />
       <Gallery />
-      <BulletPoints title="PLUS DE SERVICES" description="Consultez la liste complète des services d'aménagement paysager que nous offrons." points={points} linkName="Telecharger notre brochure" path='/download'  />
+      <BulletPoints title="PLUS DE SERVICES" description="Consultez la liste complète des services d'aménagement paysager que nous offrons." points={points} linkName="Telecharger notre brochure" path='/download' />
+      <Container>
+        <WhyChooseUs />
+
+      </Container>
     </Layout>
   )
 }

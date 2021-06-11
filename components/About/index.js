@@ -88,7 +88,10 @@ export default function About() {
                     </Col>
                 </Row>
             </AboutSection>
-            <WhyChooseUs />
+            <Container>
+                <WhyChooseUs />
+
+            </Container>
         </Container>
     )
 }
