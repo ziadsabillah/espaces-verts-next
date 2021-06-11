@@ -2,8 +2,6 @@ import { Container, Row, Col } from "react-bootstrap"
 import styled from "styled-components";
 import { Form, FormGroup, Input, SubmitButton, TextArea } from './General'
 
-import Logo from './Navbar/Logo';
-
 const ContactSection = styled.section`
     position: relative;
     padding: 90px 0px 60px;
@@ -18,25 +16,6 @@ const ColCentered = styled(Col)`
 `;
 
 
-
-const InfoTitle = styled.h2`
-    position: relative;
-    color: #242424;
-    font-size: 26px;
-    font-weight: 600;
-    padding-bottom: 12px;
-    margin-bottom: 40px;
-
-    &::after {
-        position: absolute;
-        content: '';
-        left: 0px;
-        bottom: 0px;
-        width: 40px;
-        height: 2px;
-        background-color: #4E9918;
-    }
-`;
 
 const InfoList = styled.ul`
     position: relative;
