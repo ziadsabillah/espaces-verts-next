@@ -13,6 +13,7 @@ const ColCentered = styled(Col)`
         text-align: center;
         margin: 2em auto;
     }
+    
 `;
 
 
