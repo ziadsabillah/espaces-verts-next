@@ -131,7 +131,7 @@ const TopHeader = () => {
                         </BoxAddress>
                         <Button>
                                 <ButtonWrap>
-                                    <a href="/">Reserver</a>
+                                    <a href="/contact">Reserver</a>
                                 </ButtonWrap>
                         </Button>
                     </TopHeaderWrapper>
